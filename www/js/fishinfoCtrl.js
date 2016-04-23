@@ -1,8 +1,8 @@
 angular.module('starter.controllers')
-.controller('fishInfoCtrl', ['$scope','$stateParams', function (scope,stateParams) {
+.controller('fishInfoCtrl', ['$scope','$stateParams','fillets', function (scope,stateParams,fillets) {
 
   var id = stateParams.id
-  console.log(id);
 
-
+  var info = fillets.getDetail(id);
+  console.log(info);
 }])

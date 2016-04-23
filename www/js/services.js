@@ -4,6 +4,7 @@ angular.module('starter.services', [])
     return {
         getDetail: function (id) {
             window.fillets.forEach(function (f) {
+              console.log("tooo " + id);
                 if (f.id === id) {
                     return f;
                 }

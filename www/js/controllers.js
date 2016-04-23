@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['starter.services'])
 
 .controller('resultsCtrl', function ($scope, $stateParams, fillets) {
 	$scope.fillets = fillets.getAll();
