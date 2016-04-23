@@ -48,6 +48,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl: 'templates/fishinfo.html'
   })
 
+  .state('results', {
+    url: '/results',
+    controller: 'resultsCtrl',
+    templateUrl: 'templates/results.html'
+  })
+
   .state('location', {
     url: '/location',
     controller: 'locationCtrl',

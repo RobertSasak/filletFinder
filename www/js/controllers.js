@@ -1,5 +1,9 @@
 angular.module('starter.controllers', [])
 
+.controller('resultsCtrl', function ($scope) {
+	$scope.fillets = window.fillets;
+})
+
 .controller('locationCtrl', function ($scope, $stateParams, $state) {
 	$scope.next = nextHandler('part', $stateParams, $state);
 })
