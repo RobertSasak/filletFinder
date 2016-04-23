@@ -3,6 +3,6 @@ angular.module('starter.controllers')
 
   var id = stateParams.id
 
-  var info = fillets.getDetail(id);
-  console.log(info);
+   scope.info = fillets.getDetail(id);
+  
 }])
