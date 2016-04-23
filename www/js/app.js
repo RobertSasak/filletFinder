@@ -38,14 +38,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   .state('location', {
     url: '/location',
+    controller: 'locationCtrl',
     templateUrl: 'templates/location.html'
   })
 
-  // setup an abstract state for the tabs directive
-  .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
+  .state('part', {
+    url: '/part',
+    controller: 'partCtrl',
+    templateUrl: 'templates/part.html'
+  })
+
+  .state('skin', {
+    url: '/skin',
+    controller: 'skinCtrl',
+    templateUrl: 'templates/skin.html'
+  })
+
+  .state('freshness', {
+    url: '/freshness',
+    controller: 'freshnessCtrl',
+    templateUrl: 'templates/freshness.html'
+  })
+
+  .state('color', {
+    url: '/color',
+    controller: 'colorCtrl',
+    templateUrl: 'templates/color.html'
   });
 
   // if none of the above states are matched, use this as the fallback

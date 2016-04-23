@@ -1,17 +1,21 @@
 <ion-view title="Choose country">
     <ion-content padding="true" class="has-header">
         <ion-list>
-            <ion-item class="item-thumbnail-left" ng-click="next('part', 'location', 'northAmerica')">
+            <ion-item class="item-thumbnail-left" ng-click="next('location', 'northAmerica')">
                 <img src="img/location/northAmerica.png">
                 <h2>North America</h2>
             </ion-item>
-            <ion-item class="item-thumbnail-left" ng-click="next('part', 'location', 'centralAmerica')">
+            <ion-item class="item-thumbnail-left" ng-click="next('location', 'centralAmerica')">
                 <img src="img/location/centralAmerica.png">
                 <h2>Central America</h2>
             </ion-item>
-            <ion-item class="item-thumbnail-left" ng-click="next('part', 'location', 'southAmerica')">
+            <ion-item class="item-thumbnail-left" ng-click="next('location', 'southAmerica')">
                 <img src="img/location/southAmerica.png">
                 <h2>South America</h2>
+            </ion-item>
+            <ion-item class="item-thumbnail-left" ng-click="next()">
+                <i class="icon ion-help"></i>
+                <h2>Skip</h2>
             </ion-item>
         </ion-list>
     </ion-content>
