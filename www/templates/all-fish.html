@@ -7,7 +7,7 @@
     <label class="item-input-wrapper">
       <input type="text" placeholder="Fish name" ng-model="input.searchText" />
     </label>
-    <button ng-if="input.searchText.length!==0" ng-click="clear()" class="button button-small">
+    <button ng-show="input.searchText.length!==0" ng-click="clear()" class="button button-small">
       Clear
     </button>
   </div>

@@ -1,26 +1,57 @@
-<ion-view title="Fillet finder" id="page1">
+<ion-view title="{{info.name}}" id="page1">
+  <div class="bar bar-subheader">
+  <h2 class="title">{{info.latinname}}</h2>
+</div>
     <ion-content padding="true" class="has-header">
 
 
     <div class="list card">
 
-      <div class="item item-avatar">
 
-        <h2>{{info.name}}</h2>
-        <p>{{info.latinname}}</p>
-      </div>
+
       <div class="item item-body">
-        <img  ng-src="{{info.image1}}" width="150px"  >
-        <img  ng-src="{{info.image2}}" width="150px"  >
+
+
+
         <p>
-          Location : {{info.location}}
+          <img  ng-src="{{info.image1}}" width="450px"  >
         </p>
+        <p>
+        <img  ng-src="{{info.image2}}" width="150px"  >
+        </p>
+
+        <div class="row">
+          <div class="col">Location:</div>
+          <div class="col">{{info.location}}</div>
+
+
+        </div>
+
+        <div class="row">
+          <div class="col">Consumption recommendation:</div>
+          <div class="col"><img  ng-src="{{consumptionRecommendation(info)}}" width="100px" /></div>
+        </div>
+
+
+        <div class="row">
+          <div class="col">Consumption size recommedation:</div>
+          <div class="col">{{info.consumptionSizeRecommended}}</div>
+        </div>
+
+        <div class="row">
+          <div class="col">Segment bending:</div>
+          <div class="col">{{info.segmentBending}}</div>
+        </div>
+        <div class="row">
+          <div class="col">Segment width:</div>
+          <div class="col">{{info.segmentWidth}}</div>
+        </div>
 
       </div>
 
     </div>
 
-
+<div>{{info | json}}</div>
     </ion-content>
 
 
