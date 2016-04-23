@@ -1,7 +1,8 @@
 angular.module('starter.controllers', [])
 
-.controller('resultsCtrl', function ($scope) {
+.controller('resultsCtrl', function ($scope, $stateParams) {
 	$scope.fillets = window.fillets;
+	$scope.params = $stateParams;
 })
 
 .controller('locationCtrl', function ($scope, $stateParams, $state) {
