@@ -5,30 +5,34 @@ angular.module('starter.controllers', ['starter.services'])
 	$scope.params = $stateParams;
 })
 
-.controller('locationCtrl', function ($scope, $stateParams, $state) {
+.controller('locationCtrl', function ($scope, $stateParams, $state, fillets, $filter) {
 	$scope.next = nextHandler('part', $stateParams, $state);
 	$scope.params = $stateParams;
+	$scope.active = active($stateParams, fillets.getAll(), $filter);
 })
 
-.controller('partCtrl', function ($scope, $stateParams, $state) {
+.controller('partCtrl', function ($scope, $stateParams, $state, fillets, $filter) {
 	$scope.next = nextHandler('skin', $stateParams, $state);
 	$scope.params = $stateParams;
+	$scope.active = active($stateParams, fillets.getAll(), $filter);
 })
 
-.controller('skinCtrl', function ($scope, $stateParams, $state) {
+.controller('skinCtrl', function ($scope, $stateParams, $state, fillets, $filter) {
 	$scope.next = nextHandler('freshness', $stateParams, $state);
 	$scope.params = $stateParams;
+	$scope.active = active($stateParams, fillets.getAll(), $filter);
 })
 
-.controller('freshnessCtrl', function ($scope, $stateParams, $state) {
+.controller('freshnessCtrl', function ($scope, $stateParams, $state, fillets, $filter) {
 	$scope.next = nextHandler('color', $stateParams, $state);
 	$scope.params = $stateParams;
+	$scope.active = active($stateParams, fillets.getAll(), $filter);
 })
 
 .controller('colorCtrl', function ($scope, $stateParams, $state, fillets, $filter) {
 	$scope.next = nextHandler('results', $stateParams, $state);
 	$scope.params = $stateParams;
-	$scope.active = active($stateParams, fillets, $filter);
+	$scope.active = active($stateParams, fillets.getAll(), $filter);
 });
 
 function nextHandler(page, $stateParams, $state) {
@@ -46,7 +50,6 @@ function active($stateParams, fillets, $filter) {
 		var params = angular.copy($stateParams);
 		params[property] = value;
 		var filtered = $filter('filter')(fillets, params);
-		console.log(filtered);
 		return filtered.length > 0;
 	};
 }

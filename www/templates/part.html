@@ -3,11 +3,11 @@
         <ion-list>
             <teaser params="params"></teaser>
             <div class="item item-divider">Filter by</div>
-            <ion-item class="item-thumbnail-left" ng-click="next('part', false)">
+            <ion-item class="item-thumbnail-left" ng-class="{disable:!active('part', false)}" ng-click="next('part', false)">
                 <img src="img/part/whole.png">
                 <h2>Whole fillet</h2>
             </ion-item>
-            <ion-item class="item-thumbnail-left" ng-click="next('part', true)">
+            <ion-item class="item-thumbnail-left" ng-class="{disable:!active('part', true)}" ng-click="next('part', true)">
                 <img src="img/part/part.png">
                 <h2>Part of the fillet</h2>
             </ion-item>
