@@ -1,8 +1,13 @@
 <ion-view title="Results">
+	<ion-nav-bar>
+ 		<ion-nav-back-button class="button-clear" ng-click="myGoBack()">
+    		<i class="ion-arrow-left-c"></i> Back
+  		</ion-nav-back-button>
+	</ion-nav-bar>
     <ion-content padding="true" class="has-header">
         <ion-list>
             <ion-item ng-repeat="f in fillets | orderBy:name" class="item-thumbnail-left" ng-click="next('part', false)">
-                <img src="img/part/whole.png">
+                <img src="{{f.image1}}">
                 <h2 ng-bind="f.name"></h2>
                 <p>{{f.latinname}}</p>
             </ion-item>
