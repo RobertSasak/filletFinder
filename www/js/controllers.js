@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
-.controller('resultsCtrl', function ($scope, $stateParams) {
-	$scope.fillets = window.fillets;
+.controller('resultsCtrl', function ($scope, $stateParams, fillets) {
+	$scope.fillets = fillets.getAll();
 	$scope.params = $stateParams;
 })
 
