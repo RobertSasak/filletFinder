@@ -1,0 +1,15 @@
+<pre>{{params|json}}</pre>
+<div class="item item-divider" ng-if="results.length>0">
+    Showing {{results.length}} fillets.
+</div>
+<div class="item item-divider" ng-if="results.length==1">
+    Showing 1 fillet.
+</div>
+<div class="item item-divider" ng-if="results.length==0">
+    No fillet found.
+</div>
+<ion-item ng-repeat="f in fillets | orderBy:name| filter:{color:params.color} as results" class="item-thumbnail-left" ui-sref="fishinfo({id:f.id})">
+	<img src="{{f.image1}}">
+	<h2 ng-bind="f.name"></h2>
+	<p ng-bind="f.latinname"></p>
+</ion-item>
