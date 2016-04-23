@@ -28,11 +28,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .config(function ($stateProvider, $urlRouterProvider) {
 
         var filters = {
-            color: null,
-            skin: null,
-            part: null,
-            location: null,
-            freshness: null,
+            color: undefined,
+            skin: undefined,
+            part: undefined,
+            location: undefined,
+            freshness: undefined,
         };
         var urlParams = '?color&skin&part&location&freshness';
 

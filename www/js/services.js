@@ -10,7 +10,9 @@ angular.module('starter.services', [])
             });
         },
         getAll: function () {
-            return window.fillets;
+            return window.fillets.filter(function (f) {
+                return f.name;
+            });
         }
     };
 });
