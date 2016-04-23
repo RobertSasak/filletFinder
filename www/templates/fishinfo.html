@@ -14,10 +14,10 @@
 
 
         <p>
-          <img  ng-src="{{info.image1}}" width="450px"  >
+          <img  ng-src="{{info.image1}}" class="full-image"  >
         </p>
         <p>
-        <img  ng-src="{{info.image2}}" width="150px"  >
+        <img  ng-src="{{info.image2}}" class="full-image"  >
         </p>
 
         <div class="row">
@@ -29,9 +29,21 @@
 
         <div class="row">
           <div class="col">Consumption recommendation:</div>
-          <div class="col"><img  ng-src="{{consumptionRecommendation(info)}}" width="100px" /></div>
+          <div class="col"><img  ng-src="{{consumptionRecommendation(info)}}" width="70px" /></div>
         </div>
 
+        <div class="row">
+          <div class="col">Iucn Category:</div>
+          <div class="col"><img  ng-src="{{iucnCategory(info)}}" width="240px" />
+        </div>
+
+        </div>
+
+        <div class="row" >
+          <div class="col"></div>
+          <div class="col">{{info.iucnCategory}}</div>
+
+        </div>
 
         <div class="row">
           <div class="col">Consumption size recommedation:</div>
@@ -51,10 +63,9 @@
 
     </div>
 
-<div>{{info | json}}</div>
     </ion-content>
 
-
+{{info | json}}
 
 
 </ion-view>

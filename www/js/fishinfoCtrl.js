@@ -7,14 +7,37 @@ angular.module('starter.controllers')
 
 
    scope.consumptionRecommendation = function(info){
-     console.log(info);
+     var url = "img/recommandation/";
      if(info.recommendation ==='Neutral'){
-       return "img/recommandation/1.png";
+       return url +"1.png";
      }else if(info.recommendation === 'Recommended'){
-       return "img/recommandation/2.png";
+       return url +"2.png";
      }else if(info.recommendation === 'Not recommended'){
-       return "img/recommandation/0.png";
+       return url + "0.png";
      }
+
+   }
+
+
+   scope.iucnCategory = function(info){
+       var lucn = info.iucnCategory;
+
+       console.log(lucn);
+       console.log(info);
+
+       var url = "img/lucn/";
+
+       if(lucn ==='Least concern'){
+         return url + "Least concern.PNG";
+       }else if(lucn === 'Near threatened'){
+         return  url + "Near threatened.PNG";
+       }else if(lucn=== 'Does not apply'){
+         return url +"NADA.PNG";
+       }else if(lucn === 'Vulnerable'){
+         return url + "Vulnerable.PNG";
+       }else if(lucn === 'Information lacking'){
+         return  url +"NADA.PNG";
+       }
 
    }
 
