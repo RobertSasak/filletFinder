@@ -14,7 +14,7 @@
 
 
   <div ng-repeat="fish in fillets | filter:{name:input.searchText}">
-      <a  class="item item-thumbnail-left" href="#/fishinfo:">
+      <a  class="item item-thumbnail-left" ui-sref="fishinfo({id : fish.id})">
         <img ng-src="{{fish.image1}}">
         <h2>{{fish.name}}</h2>
         <p>{{fish.latinname}}</p>

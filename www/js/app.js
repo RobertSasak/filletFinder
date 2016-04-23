@@ -48,7 +48,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                 templateUrl: 'templates/all-fish.html'
             })
             .state('fishinfo', {
-                url: '/fishinfo',
+                url: '/fishinfo/:id',
                 controller: 'fishInfoCtrl',
                 templateUrl: 'templates/fishinfo.html'
             })

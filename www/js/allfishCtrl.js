@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-.controller('allFishCtrl', ['$scope', function (scope) {
+.controller('allFishCtrl', ['$scope','$state' ,function (scope,state) {
 
   scope.fillets = window.fillets;
   scope.input ={};
