@@ -33,9 +33,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
             part: undefined,
             location: undefined,
             freshness: undefined,
-            segmentWidth: undefined,
+            segmentwidth: undefined,
+            segmentbending: undefined,
         };
-        var urlParams = '?color&skin&part&location&freshness&segmentWidth';
+        var urlParams = '?color&skin&part&location&freshness&segmentwidth&segmentbending';
 
         $stateProvider
             .state('main', {

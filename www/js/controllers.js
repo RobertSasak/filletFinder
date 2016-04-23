@@ -30,12 +30,18 @@ angular.module('starter.controllers', ['starter.services'])
 })
 
 .controller('colorCtrl', function ($scope, $stateParams, $state, fillets, $filter) {
-	$scope.next = nextHandler('results', $stateParams, $state);
+	$scope.next = nextHandler('segmentWidth', $stateParams, $state);
 	$scope.params = $stateParams;
 	$scope.active = active($stateParams, fillets.getAll(), $filter);
 })
 
 .controller('segmentWidthCtrl', function ($scope, $stateParams, $state, fillets, $filter) {
+	$scope.next = nextHandler('segmentBending', $stateParams, $state);
+	$scope.params = $stateParams;
+	$scope.active = active($stateParams, fillets.getAll(), $filter);
+})
+
+.controller('segmentBendingCtrl', function ($scope, $stateParams, $state, fillets, $filter) {
 	$scope.next = nextHandler('results', $stateParams, $state);
 	$scope.params = $stateParams;
 	$scope.active = active($stateParams, fillets.getAll(), $filter);
