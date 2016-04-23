@@ -7,5 +7,11 @@ angular.module('starter.controllers')
   };
 
 
+  scope.findFilet= function(){
+    $state.go('location')
+
+  };
+
+
 
 }])
