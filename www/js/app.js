@@ -31,9 +31,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+  
     .state('main', {
     url: '/main',
+    controller: 'mainCtrl',
     templateUrl: 'templates/main.html'
+  })
+  .state('allfish', {
+    url: '/allfish',
+    controller: 'allFishCtrl',
+    templateUrl: 'templates/all-fish.html'
+  })
+    .state('fishinfo', {
+    url: '/fishinfo',
+    controller: 'fishInfoCtrl',
+    templateUrl: 'templates/fishinfo.html'
   })
 
   .state('location', {
