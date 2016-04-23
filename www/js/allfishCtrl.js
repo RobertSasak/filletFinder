@@ -1,7 +1,7 @@
 angular.module('starter.controllers')
-.controller('allFishCtrl', ['$scope','$state' ,function (scope,state) {
+.controller('allFishCtrl', ['$scope','$state','fillets' ,function (scope,state,fillets) {
 
-  scope.fillets = window.fillets;
+  scope.fillets = fillets.getAll();
   scope.input ={};
   scope.inputsearchText = "";
 
