@@ -2,35 +2,23 @@
   <ion-content padding="true" class="has-header">
 <h1>Fish list</h1>
 <div class="list">
-  <div class="list">
 
-      <a class="item item-thumbnail-left" href="#/fishinfo">
-        <img src="cover.jpg">
-        <h2>Fish</h2>
-        <p>Nine Inch Nails</p>
+  <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="Fish name" ng-model="input.searchText" />
+    </label>
+    <button ng-if="input.searchText.length!==0" ng-click="clear()" class="button button-small">
+      Clear
+    </button>
+  </div>
+
+
+  <div ng-repeat="fish in fillets | filter:{name:input.searchText}">
+      <a  class="item item-thumbnail-left" href="#/fishinfo:">
+        <img ng-src="{{fish.image1}}">
+        <h2>{{fish.name}}</h2>
+        <p>{{fish.latinname}}</p>
       </a>
-
-
-      <a class="item item-thumbnail-left" href="#/fishinfo">
-        <img src="cover.jpg">
-        <h2>Pretty Hate Machine</h2>
-        <p>Nine Inch Nails</p>
-      </a>
-
-
-      <a class="item item-thumbnail-left" href="#/fishinfo">
-        <img src="cover.jpg">
-        <h2>Pretty Hate Machine</h2>
-        <p>Nine Inch Nails</p>
-      </a>
-
-      <a class="item item-thumbnail-left" href="#/fishinfo">
-        <img src="cover.jpg">
-        <h2>Pretty Hate Machine</h2>
-        <p>Nine Inch Nails</p>
-      </a>
-
-
 
   </div>
 
