@@ -33,8 +33,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
             part: undefined,
             location: undefined,
             freshness: undefined,
+            segmentWidth: undefined,
         };
-        var urlParams = '?color&skin&part&location&freshness';
+        var urlParams = '?color&skin&part&location&freshness&segmentWidth';
 
         $stateProvider
             .state('main', {
@@ -87,6 +88,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                 params: filters,
                 controller: 'colorCtrl',
                 templateUrl: 'templates/color.html'
+            })
+            .state('segmentWidth', {
+                url: '/segmentWidth' + urlParams,
+                params: filters,
+                controller: 'segmentWidthCtrl',
+                templateUrl: 'templates/segmentWidth.html'
+            })
+            .state('segmentBending', {
+                url: '/segmentBending' + urlParams,
+                params: filters,
+                controller: 'segmentBendingCtrl',
+                templateUrl: 'templates/segmentBending.html'
             });
 
         // if none of the above states are matched, use this as the fallback

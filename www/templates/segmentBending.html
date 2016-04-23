@@ -1,0 +1,20 @@
+<ion-view title="Segment bending">
+    <ion-content class="has-header">
+        <teaser params="params"></teaser>
+        <div class="item item-divider">Filter by</div>
+        <ion-list>
+            <ion-item class="item-thumbnail-left" ng-class="{disable:!active('segmentBending', 'Bent')}" ng-click="next('segmentBending', 'Bent')">
+                <img src="img/segmentBending/bent.png">
+                <h2>Bent</h2>
+            </ion-item>
+            <ion-item class="item-thumbnail-left" ng-class="{disable:!active('segmentBending', 'Straight')}" ng-click="next('segmentBending', 'Straight')">
+                <img src="img/segmentBending/straight.png">
+                <h2>Straight</h2>
+            </ion-item>
+            <ion-item class="item-thumbnail-left" ng-click="next()">
+                <i class="icon ion-help"></i>
+                <h2>Skip</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

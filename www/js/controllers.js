@@ -6,7 +6,7 @@ angular.module('starter.controllers', ['starter.services'])
 })
 
 .controller('locationCtrl', function ($scope, $stateParams, $state, fillets, $filter) {
-	$scope.next = nextHandler('part', $stateParams, $state);
+	$scope.next = nextHandler('skin', $stateParams, $state);
 	$scope.params = $stateParams;
 	$scope.active = active($stateParams, fillets.getAll(), $filter);
 })
@@ -30,6 +30,12 @@ angular.module('starter.controllers', ['starter.services'])
 })
 
 .controller('colorCtrl', function ($scope, $stateParams, $state, fillets, $filter) {
+	$scope.next = nextHandler('results', $stateParams, $state);
+	$scope.params = $stateParams;
+	$scope.active = active($stateParams, fillets.getAll(), $filter);
+})
+
+.controller('segmentWidthCtrl', function ($scope, $stateParams, $state, fillets, $filter) {
 	$scope.next = nextHandler('results', $stateParams, $state);
 	$scope.params = $stateParams;
 	$scope.active = active($stateParams, fillets.getAll(), $filter);
