@@ -21,45 +21,59 @@
         </p>
 
         <div class="row">
-          <div class="col">Location:</div>
+          <div class="col"><b>Location</b></div>
+        </div>
+        <div class="row">
           <div class="col">{{info.location}}</div>
-
-
         </div>
 
         <div class="row">
-          <div class="col">Consumption recommendation:</div>
+          <div class="col"><b>Consumption recommendation</b></div>
+        </div>
+
+        <div class="row">
           <div class="col"><img  ng-src="{{consumptionRecommendation(info)}}" width="70px" /></div>
         </div>
 
         <div class="row">
-          <div class="col">Iucn Category:</div>
-          <div class="col"><img  ng-src="{{iucnCategory(info)}}" width="240px" />
-        </div>
-
-        </div>
-
-        <div class="row" >
-          <div class="col"></div>
-          <div class="col">{{info.iucnCategory}}</div>
-
+          <div class="col"><b>Iucn Category</b></div>
         </div>
 
         <div class="row">
-          <div class="col">Consumption size recommedation:</div>
+          <div class="col"><img  ng-src="{{iucnCategory(info)}}" class="full-image" /></div>
+        </div>
+
+        <div class="row" >
+          <div class="col">{{info.iucnCategory}}</div>
+        </div>
+
+        <div class="row">
+          <div class="col"><b>Consumption size recommedation</b></div>
+        </div>
+
+        <div class="row">
           <div class="col">{{info.consumptionSizeRecommended}}</div>
         </div>
 
         <div class="row">
-          <div class="col">Segment bending:</div>
-          <div class="col">{{info.segmentBending}}</div>
+          <div class="col"><b>Segment bending</b></div>
         </div>
+
         <div class="row">
-          <div class="col">Segment width:</div>
-          <div class="col">{{info.segmentWidth}}</div>
+          <div class="col">{{info.segmentbending}}</div>
+        </div>
+
+        <div class="row">
+          <div class="col"><b>Segment width</b></div>
+        </div>
+
+        <div class="row">
+          <div class="col">{{info.segmentwidth}}</div>
         </div>
 
       </div>
+
+
 
     </div>
 
