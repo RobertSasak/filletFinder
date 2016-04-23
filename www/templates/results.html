@@ -1,11 +1,10 @@
 <ion-view title="Results">
     <ion-content class="has-header">
-    <pre>{{params|json}}</pre>
         <ion-list>
             <ion-item ng-repeat="f in fillets| filter:{color:params.color} | orderBy:name " class="item-thumbnail-left" ng-click="next('part', false)">
                 <img src="{{f.image1}}">
                 <h2 ng-bind="f.name"></h2>
-                <p>{{f.latinname}} - color:{{f.color}}</p>
+                <p ng-bind="f.latinname"></p>
             </ion-item>
         </ion-list>
     </ion-content>
