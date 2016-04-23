@@ -13,7 +13,7 @@
   </div>
 
 
-  <div ng-repeat="fish in fillets | filter:{name:input.searchText}">
+  <div ng-repeat="fish in fillets | filter:{name:input.searchText} |  orderBy: 'name' ">
       <a  class="item item-thumbnail-left" ui-sref="fishinfo({id : fish.id})">
         <img ng-src="{{fish.image1}}">
         <h2>{{fish.name}}</h2>
