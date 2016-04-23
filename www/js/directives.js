@@ -9,4 +9,15 @@ angular.module('starter.directives', ['starter.services'])
 				scope.fillets = fillets.getAll();
 			}
 		};
+	})
+	.directive('teaser', function (fillets) {
+		return {
+			templateUrl: 'templates/teaser.html',
+			scope: {
+				params: '=',
+			},
+			link: function (scope) {
+				scope.fillets = fillets.getAll();
+			}
+		};
 	});
