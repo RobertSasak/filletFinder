@@ -14,17 +14,21 @@
             <div class="item item-divider">Consumption size recommedation</div>
             <div class="item item-text-wrap">
                 <img style="float: left;" ng-src="{{consumptionRecommendation(info)}}" width="45px" />
-                <div style="display: inline-box;">{{info.consumptionSizeRecommended}}</div>
+                <div style="display: inline-box; line-height: 3em;">{{info.consumptionSizeRecommended}}</div>
             </div>
         </div>
 
         <div class="card">
             <div class="item item-divider">Location</div>
-            <div class="item item-text-wrap">{{info.location}}</div>
+            <div class="item item-text-wrap">
+                <ul>
+                    <li ng-repeat="l in location(info.location)">{{l}}</li>
+                </ul>
+            </div>
         </div>
 
         <div class="card">
-            <div class="item item-divider">Iucn Category</div>
+            <div class="item item-divider">IUCN Category</div>
             <div class="item item-image"><img  ng-src="{{iucnCategory(info)}}" class="full-image" /></div>
         </div>
 
